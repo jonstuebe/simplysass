@@ -1,0 +1,13 @@
+@mixin center-element($type: 'vertical'){
+  
+  position: absolute;
+  
+  @if $type == 'vertical' {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+}
