@@ -1,0 +1,70 @@
+@mixin position($position: relative, $coords: null null null null) {
+  
+  @if type-of($position) == 'list' { // position variables spot is actually coords
+    $coords: $position;
+    $position: relative;
+  }
+  
+  position: $position;
+  top: nth($coords, 1);
+	right: nth($coords, 2);
+	bottom: nth($coords, 3);
+	left: nth($coords, 4);
+		
+}
+
+@mixin position-tl($position: relative, $coords: null null) {
+	
+	@if type-of($position) == 'list' {
+		$coords: $position;
+		$position: relative;
+	}
+	
+	$top: nth($coords, 1);
+	$left: nth($coords, 2);
+	
+	@include position($position, $top null null $left);
+	
+}
+
+@mixin position-tr($position: relative, $coords: null null) {
+	
+	@if type-of($position) == 'list' {
+		$coords: $position;
+		$position: relative;
+	}
+	
+	$top: nth($coords, 1);
+	$right: nth($coords, 2);
+	
+	@include position($position, $top $right null null);
+	
+}
+
+@mixin position-bl($position: relative, $coords: null null) {
+	
+	@if type-of($position) == 'list' {
+		$coords: $position;
+		$position: relative;
+	}
+	
+	$bottom: nth($coords, 1);
+	$left: nth($coords, 2);
+	
+	@include position($position, null null $bottom $left);
+	
+}
+
+@mixin position-br($position: relative, $coords: null null) {
+	
+	@if type-of($position) == 'list' {
+		$coords: $position;
+		$position: relative;
+	}
+	
+	$bottom: nth($coords, 1);
+	$right: nth($coords, 2);
+	
+	@include position($position, null $right $bottom null);
+	
+}
