@@ -1,0 +1,11 @@
+@mixin hit-area($radius: 5px){
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: -1 * $radius;
+		left: -1 * $radius;
+		width: calc(100% + #{$radius * 2});
+		height: calc(100% + #{$radius * 2});
+	}
+}
