@@ -28,6 +28,8 @@ So far, there are five mixins included (with more to come):
 - [center-element](#center-element)
 - [clearfix](#clearfix)
 - [hide-text](#hide-text)
+- [hit-area](#hit-area)
+- [position](#position)
 
 
 ### center-element
@@ -63,4 +65,29 @@ Hide text for use with background images.
 .element {
   @include hide-text;
 }
+```
+
+### hit-area
+Increase hit area for an element.
+```sass
+.element {
+  @include hit-area(5px); // where 5px = radius
+}
+```
+
+### position
+Quickly set the position of an element. The variables go something like this:
+```sass
+@include position($position: relative/absolute/fixed; $coords: top right bottom left);
+```
+So for example if you wanted to have an element be positioned absolutely with a top of 20px and left of 20px, you could simply write:
+```sass
+@include position(absolute, 20px null null 20px);
+```
+To speed up this process, there is also a few other mixins available:
+```sass
+@include position-tl($position, $top $left);
+@include position-tr($position, $top $right);
+@include position-bl($position, $bottom $right);
+@include position-br($position, $bottom $right);
 ```
