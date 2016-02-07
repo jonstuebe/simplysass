@@ -25,6 +25,11 @@ gulp.task('css', function(){
 ## Usage
 So far, there are five mixins included (with more to come):
 
+- [center-element](#center-element)
+- [clearfix](#clearfix)
+- [hide-text](#hide-text)
+
+
 ### center-element
 Will using absolute positioning & transforms, center align (either horizontally or vertically) an element.
 ```sass
@@ -49,5 +54,13 @@ or
 ```sass
 .element {
   @extend %clearfix;
+}
+```
+
+### hide-text
+Hide text for use with background images.
+```sass
+.element {
+  @include hide-text;
 }
 ```
