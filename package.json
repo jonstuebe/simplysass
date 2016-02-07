@@ -1,0 +1,30 @@
+{
+  "name": "simplysass",
+  "version": "0.1.0",
+  "description": "A set of Sass mixins for use in projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonstuebe/simplysass.git"
+  },
+  "keywords": [
+    "sass",
+    "mixins",
+    "tools",
+    "eyeglass-module"
+  ],
+  "eyeglass": {
+    "sassDir": "sass",
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
+  },
+  "author": "Jon Stuebe <jstuebe@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonstuebe/simplysass/issues"
+  },
+  "homepage": "https://github.com/jonstuebe/simplysass#readme"
+}
